@@ -1,0 +1,83 @@
+cofigure forwarding
+{{{
+echo 1 > /proc/sys/net/ipv4/ip_forward
+}}}
+
+list current network connect
+{{{
+netstat -anp
+}}}
+
+recursive diff -q for only filename
+{{{
+diff -rq
+}}}
+
+download links in a file
+{{{
+wget -i filename
+}}}
+
+disassemble
+{{{
+objdump -d -M intel ./hello # Intel format
+objdump -d -M att ./hello # AT&T format
+}}}
+
+list files by numbers order
+{{{
+ls -v
+}}}
+
+sort by number order
+{{{
+sort -g
+}}}
+
+mergesort for sorted files
+{{{
+sort -m
+}}}
+
+get only matched times with grep
+{{{
+grep -c
+}}}
+
+get only matched filename
+{{{
+grep -l
+}}}
+
+display filesystem type with each patition
+{{{
+df -T
+}}}
+
+== file permission ==
+(who)	        u	User
+(who)	        g	Group owner
+(who)	        o	Other
+(who)	        a	All (“world”)
+(action)	+	Adding permissions
+(action)	-	Removing permissions
+(action)	=	Explicitly set permissions
+(permissions)	r	Read
+(permissions)	w	Write
+(permissions)	x	Execute
+(permissions)	t	Sticky bit
+(permissions)	s	Set UID or GID
+ 
+example:
+{{{
+% chmod go= FILE
+% chmod go-w,a+x FILE
+}}}
+
+list only hidden files
+{{{
+ls -ad .*
+}}}
+
+add setid to a shell file will not work, beacause shell
+dont have setuid funtion call

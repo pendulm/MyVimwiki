@@ -1,0 +1,15 @@
+
+| emacs           | vim       | behavior                                 |
+|-----------------+-----------+------------------------------------------|
+| C-l             | zz,zt,zb  | adjust current line's position in screen |
+| M-r             | H,M,L     | adjust cursor position                   |
+| M-x goto-char n | ngo       | jump to nth char                         |
+| M-g g n         | ngg       | jump to nth line                         |
+| M-d             | dw        | delete next word                         |
+| C-x C-x         | ``        | jump to previous position                |
+| C-q             | C-v       | insert control characters                |
+| M-^             | J         | join two lines                           |
+| M-u,M-l         | gUiw,guiw | control word's case                      |
+| C-x =           | ga        | display char code in cursor              |
+| M-z<Char>       | df<Char>  | delete until <Char>                      |
+| C-M-b,C-M-f     | %         | jump to matched parenthesis              |

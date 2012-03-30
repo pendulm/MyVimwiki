@@ -3,6 +3,11 @@
 == Tips ==
     * VimTips
     * ShellTips
+    * EmacsTips
+    * FreebsdTips
+    * PerlTips
+    * UnixTips
+    * EmacsVsVim
 
 == Note ==
     * MakeNote

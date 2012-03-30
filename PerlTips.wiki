@@ -1,0 +1,9 @@
+== books ==
+for learning: learning perl -> mastering perl -> programming perl
+for OO: intermediate perl
+example: perl cookbook
+network: network programming with perl
+practice: perl best practises
+
+== regex ==
+. and ? are not mata characters in []

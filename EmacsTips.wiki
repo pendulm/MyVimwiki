@@ -1,0 +1,24 @@
+== common ==
+M-f :: forward a word
+M-b :: backward a word
+M-< :: start
+M-> :: end
+M-gg :: specify
+C-t :: interchange characters
+M-t :: interchange words
+C-x C-t :: interchange lines
+C-x C-o :: delete continuous blank lines to only one
+M-Space :: delete continuous blank to only one
+M-\ :: delete all continuous blank
+C-x l :: display number of lines
+C-x o :: jump to other window
+M-z char :: delete until char
+
+
+== help ==
+C-h v :: display variable
+
+
+
+== misc ==
+C-x 8 RET :: input a unicode

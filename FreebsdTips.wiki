@@ -1,0 +1,24 @@
+
+`dmesg | grep attached` list devices dont work
+`pciconf -lv` list detailed information
+`/vat/run/dmesg.boot` boot info
+
+
+== special directory ==
+
+`/var/db/pkg/`
+`/var/db/portsnap/`
+`/usr/share/example` configure example files
+
+
+== command ==
+
+*chsh* :: change user's default shell
+
+
+== misc ==
+
+Scroll-Lock !PgUP/!PgDn for terminal scroll
+
+mouse-leftselect copy
+Shift+Insert paste
