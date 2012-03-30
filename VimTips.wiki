@@ -1,0 +1,22 @@
+*search* a pattern in quickfix window
+{{{
+:vimgrep /pattern/ %
+:copen
+}}}
+
+search every *buffer* in vim
+{{{
+:bufdo vimgrep /pattern/ %
+}}}
+
+show more detailed *map* info
+{{{
+:verbose map
+}}}
+
+*redirect* screen massage to register
+{{{
+:redir @a
+:echo
+:redir END
+}}}

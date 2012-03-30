@@ -1,0 +1,30 @@
+= Gnu make note =
+
+%toc
+
+== automatic variable ==
+*$@*:: target of rule
+*$?*:: all changed object
+*$^*:: full file names find in search directory
+*$<*:: first depend file find in search directory
+
+=== example ===
+{{{
+foo.o : foo.c
+    cc -c $(CFLAFS) $^ -o $@
+
+foo.o : foo.c defs.h hack.h
+    cc -c $(CFLAFS) $< -o $@
+}}}
+
+
+
+== environment variable ==
+*SHELL*:: which shell to execute command
+*CURDIR*:: current working directory
+
+----
+== quick reference ==
+http://www.gnu.org/software/make/manual/html_node/Quick-Reference.html
+
+
