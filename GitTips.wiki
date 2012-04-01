@@ -1,0 +1,1 @@
+list all branches :: git branch
