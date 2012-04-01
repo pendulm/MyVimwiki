@@ -1,0 +1,13 @@
+* [.] code chopsticks
+    - [o] *read bottle's template*
+        * [X] learn python method argument(PythonNote)
+    - [.] read code of peewee
+        * [O] super in python 
+            - [X] MRO in python
+        * [ ] metaclass
+        * [.] Guido's article about type and class
+
+* [.] read book "linux-kernel-development-3rd"
+    - [o]read book "Gnu make中文手册V1.5" 
+
+* [.] read book "python源码剖析"

@@ -1,0 +1,46 @@
+== argument of method ==
+
+values are evaluated at the point of function definition in the defining scope
+
+* required argument
+* optional argument
+
+position argument :: pass argument order by position
+keyword argument :: pass argument with a keywoed
+
+must contain required argument
+keyword argument must follow a position argument
+a argument cant both in position argument and keyword argument
+
+def func(a, *b, **c)
+b -- all position argument whitout required argument
+c -- all keyword argument
+
+
+
+=== reference ===
+http://docs.python.org/tutorial/controlflow.html#more-on-defining-functions
+
+
+== eval ==
+
+eval(expression,[globals, [locals]])
+
+* expression can be a string *or* code object
+* if !globals and !locals -- execute in current context
+* if globals and !locals -- locals = globals
+* if `'__builtins__' not in globals` -- copy current `__builtins__`
+
+=== example ===
+{{{
+from __future__ import print_function
+eval("print(globals())",{},{})
+eval("print(locals())",{})
+eval("print(globals())",{"__builtins__":__builtins__},{})
+eval("print(locals())",{"__builtins__":__builtins__})
+eval("print(locals())",{"__builtins__":__builtins__},{})
+}}}
+
+== confuse ==
+
+* what difference between global and local?
