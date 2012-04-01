@@ -1,0 +1,34 @@
+hg branches [-c] :: list all branches  
+hg addremove [-s N] :: add new remove missing in repo
+hg log -p :: see the diff
+hg log -r N :: see the Nth revision
+hg log -r N1:N2 :: see revisions from N1th to N2th
+hg update N :: chechout revision N
+hg update tip :: checkout most recent revision
+hg update null :: checkout empty repo
+hg update default :: checkout default branch
+hg identify -n :: get current revision
+hg merge  :: merge all head
+hg resolve --list :: list the files with confilcts
+hg resolve --mark file :: mark file be resolved
+hg incoming repo :: check the diff before pulling a clone
+hg head :: list heads
+hg rollback :: undo last commit
+hg serve :: open a web server
+hg export N :: export changeset N 
+hg bundle --base FIRST_REVISION_TO_BUNDLE changes.bundle :: save changes in bundle
+hg outgoing [repo] :: check what would get if push
+hg backout N :: reverse bad change
+hg commit --close-branch :: mark a branch inactive
+hg tag -r N t :: give revision N tag hg tag -r N t :: give revision N tag t
+hg clone -r N orig targ :: create a clone which only contains changes up to revN
+
+== some note ==
+revision number :: local sequential
+changeset Id    :: global hash(40-digit)
+head            :: a changeset with no child
+tip             :: most recentily changed head
+
+
+* rollback cant undo
+* rollback only undoes the last addition to history
