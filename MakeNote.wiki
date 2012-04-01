@@ -20,8 +20,10 @@ foo.o : foo.c defs.h hack.h
 
 
 == environment variable ==
-*SHELL*:: which shell to execute command
+*SHELL*:: which shell to execute command(export automatical)
 *CURDIR*:: current working directory
+*MAKEFLAGS*:: flags of make(export automatical)
+*MAKELEVEL*:: current level origin 0
 
 ----
 == quick reference ==

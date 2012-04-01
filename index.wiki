@@ -2,7 +2,6 @@
 
 == Tips ==
     * VimTips
-    * ShellTips
     * EmacsTips
     * FreebsdTips
     * PerlTips
