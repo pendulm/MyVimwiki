@@ -1,0 +1,36 @@
+== Ruby Programming Language ==
+
+=== Chapter 1 Preface ===
+==== displaying output ====
+puts :: newline and to_s
+print :: no newline and to_s
+p :: newline and inspect
+
+to_s => `__str__` in python
+
+inspect => `__repr__` in python
+
+==== viewing ruby documentation with ri ====
+. :: common
+`#` :: instance method
+`::` :: class method
+
+=== Chapter 2 Strucrure and Execution ===
+an identifiers begin with a upper case letter is a constant,
+modify it cause warning(but not error)
+
+==== specifying program encoding ====
+ruby 1.8
+`-Ku` :: utf-8
+`-ke` :: euc-jp
+`-Ks` :: sjis
+
+`__ENCODING__` is a Encoding object, represent current running source encoding
+
+==== default external encoding ====
+-K set the default external encoding and use it as source encoding
+
+Encoding.default_external => a Encoding object
+Encoding.locale_charmap => a string object(base timezone, igone option in command line)
+
+=== Chapter 2 Datatypes and Objects ===
