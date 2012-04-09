@@ -22,6 +22,7 @@ hg backout N :: reverse bad change
 hg commit --close-branch :: mark a branch inactive
 hg tag -r N t :: give revision N tag hg tag -r N t :: give revision N tag t
 hg clone -r N orig targ :: create a clone which only contains changes up to revN
+hg revert :: revert accident deleted file
 
 == some note ==
 revision number :: local sequential

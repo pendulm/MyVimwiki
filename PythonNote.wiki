@@ -1,3 +1,7 @@
+= PYTHON =
+
+%toc
+
 == argument of method ==
 
 values are evaluated at the point of function definition in the defining scope
@@ -41,6 +45,44 @@ eval("print(locals())",{"__builtins__":__builtins__})
 eval("print(locals())",{"__builtins__":__builtins__},{})
 }}}
 
+== exceptions ==
+
+standard exception names are built-in indentifiers not keywords
+{{{
+except (RuntimeError, TypeError, NameError):
+    pass
+}}}
+
+{{{
+try:
+    somethings...
+except IOError:
+    ...
+except ValueError:
+    ...
+else:
+    ...
+}}}:
+
+exception has `__str__` and `__getitem__`
+{{{
+try:
+    raise Exception('spam', 'eggs')
+except Exception as inst:
+    print inst
+    x,y = inst
+}}}
+
+when a exception is not been handled by an except clause,
+it is re-raised after finally clause
+
+=== reference ===
+http://docs.python.org/tutorial/errors.html
+
 == confuse ==
 
 * what difference between global and local?
+* why a instance method find another instance method's name in global?
+
+== Tips ==
+`del l[:]` empty a list
