@@ -34,3 +34,34 @@ Encoding.default_external => a Encoding object
 Encoding.locale_charmap => a string object(base timezone, igone option in command line)
 
 === Chapter 2 Datatypes and Objects ===
+
+===== string literals =====
+`''` only support `\' \\` no interpolation, multiline
+`""` support all escape and interpolation, multiline, escape newline(`\n`)
+`%q` same `''`
+`%Q` same `""`
+
+==== acssessing characters and substring ====
+
+* `s[0]`
+* `s[0, 2]`
+* `s[2..3]`
+* `s[0...2]`
+* `s["l"]`
+* `s[/[aeiou]/]`
+
+==== iterating string ====
+ruby 1.9
+
+string dont inlcude Enumerable
+
+* each_char
+* each_byte
+* each_line
+
+==== mulyibyte ====
+
+length :: num of char
+size :: num of char
+bytesize :: num of byte
+

@@ -1,1 +1,3 @@
-list all branches :: git branch
+git branch :: list all branches 
+git checkout -b xx :: add a new branch and chechout it
+

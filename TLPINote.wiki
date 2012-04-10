@@ -1,0 +1,9 @@
+= The Linux Programming Interface =
+
+== 1: Histoty and Standards ==
+
+* *UNIX* is a trademark hold by *Open Group*
+* pass SUS
+
+BSD and 2BSD were new tools produced at Berkeley, not complete UNIX system
+
