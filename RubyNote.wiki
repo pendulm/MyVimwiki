@@ -1,7 +1,9 @@
-== Ruby Programming Language ==
+= Ruby Programming Language =
 
-=== Chapter 1 Preface ===
-==== displaying output ====
+%toc
+
+== Chapter 1 Preface ==
+=== displaying output ===
 puts :: newline and to_s
 print :: no newline and to_s
 p :: newline and inspect
@@ -10,16 +12,18 @@ to_s => `__str__` in python
 
 inspect => `__repr__` in python
 
-==== viewing ruby documentation with ri ====
+=== viewing ruby documentation with ri ===
 . :: common
 `#` :: instance method
 `::` :: class method
 
-=== Chapter 3 Strucrure and Execution ===
+----
+
+== Chapter 2 Strucrure and Execution ==
 an identifiers begin with a upper case letter is a constant,
 modify it cause warning(but not error)
 
-==== specifying program encoding ====
+=== specifying program encoding ===
 ruby 1.8
 `-Ku` :: utf-8
 `-ke` :: euc-jp
@@ -27,21 +31,23 @@ ruby 1.8
 
 `__ENCODING__` is a Encoding object, represent current running source encoding
 
-==== default external encoding ====
+=== default external encoding ===
 -K set the default external encoding and use it as source encoding
 
 Encoding.default_external => a Encoding object
 Encoding.locale_charmap => a string object(base timezone, igone option in command line)
 
-=== Chapter 2 Datatypes and Objects ===
+----
 
-===== string literals =====
+== Chapter 3 Datatypes and Objects ==
+
+=== string literals ===
 `''` only support `\' \\` no interpolation, multiline
 `""` support all escape and interpolation, multiline, escape newline(`\n`)
 `%q` same `''`
 `%Q` same `""`
 
-==== acssessing characters and substring ====
+=== acssessing characters and substring ===
 
 * `s[0]`
 * `s[0, 2]`
@@ -50,7 +56,7 @@ Encoding.locale_charmap => a string object(base timezone, igone option in comman
 * `s["l"]`
 * `s[/[aeiou]/]`
 
-==== iterating string ====
+=== iterating string ===
 ruby 1.9
 
 string dont inlcude Enumerable
@@ -59,19 +65,19 @@ string dont inlcude Enumerable
 * each_byte
 * each_line
 
-==== mulyibyte ====
+=== mulyibyte ===
 
 length :: num of char
 size :: num of char
 bytesize :: num of byte
 
-==== arrays ====
+=== arrays ===
 
 %w[this is a test] :: ['this', 'is', 'a', 'test']
 %W(\s \t \r \n) :: ["\s", "\t", "\r", "\n"]
 
 
-==== ranges ====
+=== ranges ===
 
 continuous :: <=> (compare with endpoints)
 
@@ -83,7 +89,7 @@ include? :: continuous when numueric otherwise discrete
 member? :: same with include
 cover? :: always continuous
 
-==== symbols ====
+=== symbols ===
 
 %s["]
 
@@ -100,12 +106,12 @@ result: symbol table overflow
 
 symbols can't be garbage collect
 
-==== object class and object type ====
+=== object class and object type ===
 
 o.instance_of? :: direct instance
 o.is_a? :: can be indirect instance
 
-==== object equality ====
+=== object equality ===
 
 equal? :: defined in Object, compare by object_id
 `==` :: defined in Object, same as equal? Class can use it for a resonable equality
@@ -117,13 +123,49 @@ dont override equal?, and == for common compare, eql? for hash key compare and n
 
 Range, Regexp, Class, Symbol overide `===`
 
-==== object conversion ====
+=== object conversion ===
 
 method Array, Float, Integer, String defined in Kernel module
 
 *question?*
 
-==== coping object ====
+=== copying object ===
 
 clone :: frozebm tainted
 dup :: tainted
+
+----
+
+== Chapter 4 Expressions and Operators ==
+
+=== keyword literals ===
+
+* nil(!NilClass)
+* true(!TrueClass)
+* false(!FalseClass)
+* self
+* `__FILE__`
+* `__LINE__`
+* `_ENCODING__`
+
+=== uninitialized variables ===
+
+class variables :: !NameError
+instance variables :: nil
+global variables :: nil
+local variables :: !NameError if have not seeing a assignment
+
+variables is exist when ruby seen assignment, whether have passed value truly or not
+
+=== constant references ===
+`::` :: method and constant reference
+`.` :: only method reference
+`::ARGV` :: `Object::ARGV`
+
+*question?*
+
+_constants can only defined in modules and classed?_
+
+answer
+
+yes, p94

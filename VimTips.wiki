@@ -20,3 +20,8 @@ show more detailed *map* info
 :echo
 :redir END
 }}}
+
+*set* filetype
+{{{
+setf html
+}}}

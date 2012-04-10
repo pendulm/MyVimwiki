@@ -24,7 +24,7 @@ hg tag -r N t :: give revision N tag hg tag -r N t :: give revision N tag t
 hg clone -r N orig targ :: create a clone which only contains changes up to revN
 hg revert :: revert accident deleted file
 
-== some note ==
+== some notes ==
 revision number :: local sequential
 changeset Id    :: global hash(40-digit)
 head            :: a changeset with no child

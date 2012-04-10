@@ -6,7 +6,7 @@
             - [X] MRO in python
         * [ ] metaclass
         * [.] Guido's article about type and class
-    - [ ] read python tutorial 'Errors and Exceptions'
+    - [X] read python tutorial 'Errors and Exceptions'
 
 * [.] read book "linux-kernel-development-3rd"
     - [o]read book "Gnu make中文手册V1.5" 
