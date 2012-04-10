@@ -15,7 +15,7 @@ inspect => `__repr__` in python
 `#` :: instance method
 `::` :: class method
 
-=== Chapter 2 Strucrure and Execution ===
+=== Chapter 3 Strucrure and Execution ===
 an identifiers begin with a upper case letter is a constant,
 modify it cause warning(but not error)
 
@@ -65,3 +65,65 @@ length :: num of char
 size :: num of char
 bytesize :: num of byte
 
+==== arrays ====
+
+%w[this is a test] :: ['this', 'is', 'a', 'test']
+%W(\s \t \r \n) :: ["\s", "\t", "\r", "\n"]
+
+
+==== ranges ====
+
+continuous :: <=> (compare with endpoints)
+
+discrete :: ==, succ (compare with return value of succ)
+
+ruby 1.9
+
+include? :: continuous when numueric otherwise discrete
+member? :: same with include
+cover? :: always continuous
+
+==== symbols ====
+
+%s["]
+
+{{{
+i = 1
+loop do
+  str = i.to_s
+  s = str.to_sym
+  i += 1
+end
+}}}
+
+result: symbol table overflow
+
+symbols can't be garbage collect
+
+==== object class and object type ====
+
+o.instance_of? :: direct instance
+o.is_a? :: can be indirect instance
+
+==== object equality ====
+
+equal? :: defined in Object, compare by object_id
+`==` :: defined in Object, same as equal? Class can use it for a resonable equality
+eql? :: defined in Object, same as equal? compare for key
+
+dont override equal?, and == for common compare, eql? for hash key compare and no cast type for compare
+
+`===` :: defined in Object, same as `==`
+
+Range, Regexp, Class, Symbol overide `===`
+
+==== object conversion ====
+
+method Array, Float, Integer, String defined in Kernel module
+
+*question?*
+
+==== coping object ====
+
+clone :: frozebm tainted
+dup :: tainted
