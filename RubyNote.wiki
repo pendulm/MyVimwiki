@@ -169,3 +169,18 @@ _constants can only defined in modules and classed?_
 answer
 
 yes, p94
+
+-----
+
+== Chapter 5 Statements and Control Structures ==
+
+
+=== return value ===
+
+if :: last statement or nil
+unless :: last statement or nil
+case :: last statement or nil
+
+while :: nil
+until :: nil
+for :: *collection*
