@@ -1,0 +1,8 @@
+The order in which you include javascript is important: dependencies must be
+include before the script that depends on them.
+
+$.fn.text get the text for all elements in the selection
+
+== event ==
+this :: current
+target :: initiated
