@@ -1,0 +1,22 @@
+:: "3" + 2 => "32"
+:: 2 / 0 => Infinity
+:: 0 / 0 => !NaN
+:: +"2" => 2
+:: +"abc" => !NaN
+:: `var foo = 1; var baz = '1'; foo == baz` => true
+
+== truthy and falsy things ==
+ture
+:: '0'
+:: []
+:: {}
+:: 1
+:: object
+
+false
+:: 0
+:: ''
+:: !NaN
+:: null
+:: false
+:: undefined

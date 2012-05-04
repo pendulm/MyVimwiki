@@ -184,3 +184,54 @@ case :: last statement or nil
 while :: nil
 until :: nil
 for :: *collection*
+
+== Chapter 6 Methods, Procs, Lambdas, and Closures ==
+=== block arguments ===
+
+==== case 1 ====
+{{{
+def m(...)
+    ...
+    yield
+end
+
+m(...) {}
+}}}
+
+
+==== case 2 ====
+{{{
+def m(..., &p)
+    ...
+    p.call # also yield
+end
+
+m(...) {}
+}}}
+
+==== case 3 ====
+{{{
+p = proc.new {}
+def m(..., p)
+    ...
+    p.call # no yield
+end
+
+m(..., p)
+}}}
+
+==== case 4 ====
+{{{
+p = proc.new {}
+def m(..., &p)
+    ...
+    p.call # also yield
+end
+
+m(..., &p) # p can be any object responced to to_proc, like Proc, Method, Synmbol
+}}}
+=== method object ===
+name :: method name
+owner :: defined in which class
+receiver :: binding object
+

@@ -25,3 +25,8 @@ show more detailed *map* info
 {{{
 setf html
 }}}
+
+digraph table
+{{{
+:h digraph-table
+}}}
