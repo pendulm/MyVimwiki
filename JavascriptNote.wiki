@@ -20,3 +20,19 @@ false
 :: null
 :: false
 :: undefined
+
+== apply and call ==
+
+`setName.apply(pig, ['babe', 'honey'])` # splat array be arguments
+`setName.call(pig, 'babe', 'honey')` # pass arguments individual
+`setNmae.apply(pig)`
+`setNmae.call(pig)` # same to apply
+
+== Array ==
+all object key are converted to string, array is object
+{{{
+arr[{toString: "1"}]
+arr["1"]
+arr[1]
+}}}
+
