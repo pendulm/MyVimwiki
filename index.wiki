@@ -17,6 +17,7 @@
     * [[TLPINote]]
     * JavascriptNote
     * JqueryNote
+    * VimHelpNote
 
 == Todo Stack ==
     [[Todo Stack]]

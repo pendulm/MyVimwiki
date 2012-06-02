@@ -1,0 +1,37 @@
+= helphelp =
+
+'helplang' :: select a language for help
+* use "@zh" to find a tag in specific language
+* `help!` prefer to find a tag in same language
+* help only support wildcards like "*" ,"?" and "[a-z]"
+
+`:help ^D` for `:help CTRL-D`
+`:help i^V` for `:help i_CTRL-D`
+
+needn't to escape the '|' inside a help command
+{{{
+:help |
+:help k| only
+}}}
+
+* 'ignorecase' is not used in `helpgrep`, use "\c" instead.
+* pattern does not support line breaks, it must match within one line.
+* cannot be followed by another command
+
+
+:exu[sage] :: help on Ex commands
+:viu[sage] :: help on Normal mode commands
+
+tag is searched for in all "doc/tags" files in the directories in the
+'runtimepath' option
+
+'helpheight' for initial height of the help window
+
+use slash prepended to the tag
+{{{
+:tag /min
+:tnext
+}}}
+
+== Question? ==
+what is location list

@@ -30,3 +30,15 @@ digraph table
 {{{
 :h digraph-table
 }}}
+
+go to position where vim was previously exited
+{{{
+`0
+}}}
+
+go to position when last editing this file
+{{{
+`"
+}}}
+
+
